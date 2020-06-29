@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": ".\\node_modules\\.bin\\cypress run --headed --browser chrome --spec '.\\cypress\\integration\\tests\\**.js' --record --key a95c6ef8-632e-4694-9b12-daa8acd810a3"
+    "e2e": ".\\node_modules\\.bin\\cypress run --headed --browser chrome --spec '.\\cypress\\integration\\tests\\**.js' --record --key a95c6ef8-632e-4694-9b12-daa8acd810a3"
   },
-  "author": "",
+  "author": "chanaka",
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.2.0",
