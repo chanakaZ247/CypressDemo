@@ -1,0 +1,5 @@
+{
+  "baseUrl": "https://katalon-demo-cura.herokuapp.com",
+  "userName": "John Doe",
+  "password": "ThisIsNotAPassword"
+}

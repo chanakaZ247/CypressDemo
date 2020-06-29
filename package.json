@@ -1,0 +1,17 @@
+{
+  "name": "cypressautomation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": ".\\node_modules\\.bin\\cypress run --headed --browser chrome --spec '.\\cypress\\integration\\tests\\**.js' --record --key a95c6ef8-632e-4694-9b12-daa8acd810a3"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "cypress": "^4.8.0",
+    "cypress-plugin-tab": "^1.0.5",
+    "cypress-xpath": "^1.6.0"
+  }
+}
