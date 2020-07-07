@@ -1,4 +1,4 @@
-# cypress
+# Cypress
 This is the sample cypress framework included POM UI framework and Basic API test sample tests
 
 # To work with Cypress follow the below steps
