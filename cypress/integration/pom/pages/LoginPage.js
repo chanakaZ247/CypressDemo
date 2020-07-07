@@ -5,6 +5,11 @@ function LoginPage() {
     var txtPassword = "#txt-password";
     var btnLogin = '#btn-login';
 
+    /**
+     * Login to the Web Application
+     * @param {string} userName 
+     * @param {string} password 
+     */
     this.LoginAs = function (userName, password) {
         BasePage.Type(txtUserName, userName);
         BasePage.Type(txtPassword, password);

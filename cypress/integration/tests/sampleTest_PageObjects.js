@@ -4,6 +4,7 @@ var LandingPage = require('../pom/pages/LandingPage');
 var data = require('../../fixtures/commonData.json');
 
 describe('Test Suite 0000 : My First Test Suite with Page Object Model', function () {
+    
     it('Test Case 1111 : Add an appointment using Page Object Model', function () {
         LandingPage
             .Visit(data.baseUrl)

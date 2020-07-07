@@ -9,6 +9,14 @@ function HistoryPage() {
     var lblVisitDate = '.panel-heading';
     var lblComment = '#comment';
 
+    /**
+     * Validate the Information correct
+     * @param {string} facility 
+     * @param {boolean} reAdmission 
+     * @param {string} program 
+     * @param {string} visitDate 
+     * @param {string} comment 
+     */
     this.ValidateAppointmentInfo = function (facility, reAdmission, program, visitDate, comment) {
         BasePage.CheckElementText(lblFacility, facility);
         BasePage.CheckElementText(lblHospitalReadmission, reAdmission);
@@ -18,6 +26,9 @@ function HistoryPage() {
         return require('../pages/HistoryPage');
     }
 
+    /**
+     * Logout from the Appplication
+     */
     this.Logout = function () {
         return MainNavigationPanel.Logout();
     }
