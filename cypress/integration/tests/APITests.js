@@ -28,7 +28,7 @@ describe("3333 - My first API test suite", function () {
     it("7777 - My first DELETE API test case", function () {
         cy.request('DELETE', 'http://dummy.restapiexample.com/api/v1/delete/5').then(function (response) {
             expect(response).to.have.property('status', 200);
-            expect(response.body.message).to.equal('Error! Id must be greater than zerp');
+            expect(response.body.message).to.equal('successfully! deleted Records');
         })
     });
 });
