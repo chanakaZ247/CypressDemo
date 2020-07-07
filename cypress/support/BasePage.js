@@ -1,28 +1,42 @@
 class BasePage {
 
-    // Constructor
+    /**
+     * Constructor
+     */
     BasePage () {
         this.element = cy.get(uiElementPath);
     }
 
-    // Navigate to given URL
+    /**
+     * Navigate to given URL
+     * @param {string} baseUrl 
+     */
     NavigateTo = function (baseUrl) {
         cy.visit(baseUrl);
     }
 
-    // Key Press
+    /**
+     * Key Press
+     */
     ClickTab = function () {
         cy.focused().tab();
     }
 
-    // Click on element
+    /**
+     * Click on element
+     * @param {string} uiElementPath 
+     */
     Click = function (uiElementPath) {
         var element = cy.get(uiElementPath);
         element.should('be.visible');
         element.click();
     }
 
-    // Type on element
+    /**
+     * Type on element
+     * @param {string} uiElementPath 
+     * @param {string} userInput 
+     */
     Type = function (uiElementPath, userInput) {
         var element = cy.get(uiElementPath);
         element.should('be.visible');
@@ -30,21 +44,32 @@ class BasePage {
         element.type(userInput);
     }
 
-    // Dropdown value selection
+    /**
+     * Dropdown value selection
+     * @param {string} uiElementPath 
+     * @param {string} option 
+     */
     DropDownSelection = function (uiElementPath, option) {
         var element = cy.get(uiElementPath);
         element.select(option);
         element.should('have.value', option);
     }
 
-    // Check Box Click
+    /**
+     * Check Box Click
+     * @param {string} uiElementPath 
+     */
     CheckBoxClick = function (uiElementPath) {
         var element = cy.get(uiElementPath);
         element.click();
         element.should('be.checked');
     }
 
-    //Check Default Check Box State
+    /**
+     * Check Default Check Box State
+     * @param {string} uiElementPath 
+     * @param {string} checkBoxState 
+     */
     CheckDefaultCheckBoxState = function (uiElementPath, checkBoxState) {
         var element = cy.get(uiElementPath);
         if (checkBoxState) {
@@ -54,7 +79,11 @@ class BasePage {
         }
     }
 
-    // Check Default Radio Button Selected
+    /**
+     * Check Default Radio Button Selected
+     * @param {string} uiElementPath 
+     * @param {string} isSelected 
+     */
     CheckDefaultRadioButtonSelected = function (uiElementPath, isSelected) {
         var element = cy.get(uiElementPath);
         if (isSelected) {
@@ -64,13 +93,20 @@ class BasePage {
         }
     }
 
-    // Check Element Present
+    /**
+     * Check Element Present
+     * @param {string} uiElementPath 
+     */
     CheckElementPresent = function (uiElementPath) {
         var element = cy.get(uiElementPath);
         element.should('be.visible');
     }
 
-    // Check Element Text
+    /**
+     * Check Element Text
+     * @param {string} uiElement 
+     * @param {string} text 
+     */
     CheckElementText = function (uiElement, text) {
         var element = cy.get(uiElement);
         element.should('have.text', text);
